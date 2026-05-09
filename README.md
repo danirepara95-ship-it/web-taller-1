@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Taller de Servicio Técnico
 
-## Getting Started
+Aplicación web profesional para la gestión de un taller de servicio técnico de computadores y laptops.
 
-First, run the development server:
+## Tecnologías
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Frontend**: Next.js 15 con App Router
+- **Backend**: Supabase (PostgreSQL)
+- **Autenticación**: Supabase Auth
+- **UI**: shadcn/ui con Tailwind CSS
+- **Hosting**: Vercel
+
+## Instalación
+
+1. Clona el repositorio
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+
+3. Configura las variables de entorno:
+   Crea un archivo `.env.local` con:
+   ```
+   NEXT_PUBLIC_SUPABASE_URL=tu_supabase_url
+   NEXT_PUBLIC_SUPABASE_ANON_KEY=tu_supabase_anon_key
+   ```
+
+4. Configura Supabase:
+   - Crea un proyecto en [Supabase](https://supabase.com)
+   - Ejecuta el script SQL en `supabase/migrations/001_initial_schema.sql`
+   - Configura la autenticación
+
+5. Ejecuta el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+
+## Usuarios de Demo
+
+- **Admin**: admin@taller.com
+- **Técnico**: tecnico@taller.com
+- **Recepción**: recepcion@taller.com
+
+## Despliegue en Vercel
+
+1. Conecta tu repositorio a Vercel
+2. Configura las variables de entorno en Vercel
+3. Despliega
+
+## Funcionalidades
+
+- Dashboard con estadísticas
+- Gestión de clientes
+- Registro de equipos
+- Órdenes de servicio
+- Seguimiento de tareas
+- Inventario
+- Compras y presupuestos
+- Facturación
+- Reportes
+- Portal del cliente
+
+## Estructura del Proyecto
+
+```
+app/
+├── dashboard/          # Páginas del dashboard
+├── login/             # Página de login
+components/            # Componentes reutilizables
+lib/                   # Utilidades y configuración
+supabase/              # Migraciones de base de datos
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Licencia
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este proyecto es de código abierto.
+# web-taller-1
